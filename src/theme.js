@@ -16,4 +16,12 @@ export const theme = extendTheme({
   config: {
     cssVarPrefix: "nonD",
   },
+  components: {
+    Accordion:{
+      //add a default color
+      defaultProps: {
+        colorScheme: 'red', // default is gray
+      },
+    }
+  }
 });

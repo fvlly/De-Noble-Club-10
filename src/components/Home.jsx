@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Container, Heading, Text } from "@chakra-ui/react";
+import { Box, Button,Input, Container,Flex, Heading, Text,Stack,Divider,StackDivider } from "@chakra-ui/react";
 
 import VisionCard from "./VisionCard";
 import ProjectCard from "./ProjectCard";
@@ -62,17 +62,18 @@ const Home = () => {
         
         {/* Our projects */}
         <Box py={4}>
-          <Heading textAlign={"center"}> Our projects</Heading>
+          <Heading textAlign={"center"}> Recent projects</Heading>
           <Box
             py={"4"}
             display={["base", "base", "flex"]}
             gap={2}
-            justifyContent={"space-between"}
+            justifyContent={"space-evenly"}
           >
-            <ProjectCard description={"Summer School"} />
-            <ProjectCard description={"Sensitization"} />
-            <ProjectCard description={"Boreholes"} />
+            <ProjectCard description={"Summer School"} src='../summerschool/summerschool-1.jpg' intro='Yearly programme to improve education' />
+            <ProjectCard description={"Sensitization"}  src='../community/community-1.jpg'  intro='Community briefing on elections and safety' />
+            <ProjectCard description={"Boreholes"} intro='Borehole  in Obeira market area, to alleivate water scarcity' />
           </Box>
+        <Box textAlign={'center'}><Button colorScheme={'red'} w='140px'>View All</Button></Box>
         </Box>
       </Container>
     </Box>
