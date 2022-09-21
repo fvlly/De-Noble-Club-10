@@ -12,10 +12,23 @@ import ImageSlider from './ImageSlider'
 const Projects = () => {
   return (
     <Box as="section" minH={"95vh"} pt="110px" bgColor={"gray.900"} color='white'>
-      <Container maxW={'80vw'}>
+      <Container maxW={'75vw'}>
         <Heading py={[4,6]} color='red.300'>Our Projects</Heading>
-        <Box><ImageSlider images={communityImages} /><Box>Desc</Box></Box>
-        <Box my={6}><ImageSlider images={summerSchoolImages} /><Box>Desc</Box></Box>
+        <Box display={['block','block','flex'] } gap={12}><ImageSlider images={communityImages} />
+        <Box><Heading>Summer School</Heading>
+          <Text>
+
+          </Text>
+        </Box>
+        </Box>
+      {/* sanitization */}
+        <Box  display={['block','block','flex'] } flexDirection='row-reverse' justifyContent={'space-between'}  my={12}>
+          <ImageSlider images={summerSchoolImages} />
+          <Box justifySelf={'flex-end'}>
+            <Heading>Sanitisation</Heading>
+            <Text>Let's seee what this looks like</Text>
+          </Box>
+        </Box>
         <Heading as='h3' py={[4]} fontSize='22px' color='red.300' > Other Projects</Heading>
     <Accordion pb={6} allowToggle colorScheme={'red'} >
       <AccordionItem>

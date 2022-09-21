@@ -6,10 +6,10 @@ import ProjectCard from "./ProjectCard";
 
 const Home = () => {
   return (
-    <Box as="section" pt={"110px"} bgColor="gray.900">
-      <Container maxW={"90vw"} color="white">
-        <Box
+    <Box as="section"  bgColor="gray.900">
+      <Box
           minH={"100vh"}
+          color='white'
           bgColor="gray.900"
           bgBlendMode={"luminosity"}
           backgroundImage="../club10-homebg.jpg"
@@ -19,16 +19,18 @@ const Home = () => {
         >
           <Box pt={["30px", "60px", "130px"]}
             width={["60%", "80%",'40%']}
-            margin={["auto","auto","4"]}>
+            margin={["auto","auto","14"]}>
           <Heading
             as="h1"
-            
+            lineHeight={2}
           >
             Creating Awareness within the Ebira Community, since 1976.
           </Heading>
           <Text>The responsibilty of one is the responsibilty of all</Text>
           </Box>
         </Box>
+      <Container maxW={"75vw"} color="white">
+        
 
         <Box py={[4, 6]}>
           
@@ -51,8 +53,8 @@ const Home = () => {
         </Box>
 
         <Box display={['block','block','flex']} minH='150px' my={[4,6]} pl='4' bgColor='gray.800' color={'gray.200'}>
-           <Box width={'50%'} py={[4]}>
-           <Heading>You can make a difference</Heading>
+           <Box width={['100%','100%','50%']} py={[4]}>
+           <Heading fontSize={['18px','24px']}>You can make a difference</Heading>
             <Text py={[4]}>Your support helps more than you know</Text>
             <Button colorScheme={'orange'}>Donate now</Button>
            </Box>

@@ -12,26 +12,29 @@ const ImageSlider = ({ images }) => {
     <Box>
     <Box
       cursor={'pointer'}
-      pos="relative" w={"400px"} h="400px"
+      pos="relative" w={['300px',"450px",]} h="400px"
       border={"1px solid"} rounded={10}
       bgImg={images[currentIndex].src} bgPos="center" bgSize={"cover"}
     >
+        {/* previous Button */}
       <Icon
         onClick={()=>previousSlide()}
         as={AiFillCaretLeft}
         pos="absolute" top={"50%"} transform="translate(0, -50%)"
         w={8} h={8}
       />
+      {/* Next Button */}
       <Icon
         onClick={()=>nextSlide()}
         as={AiFillCaretRight}
         pos="absolute" top={"50%"} transform="translate(0, -50%)" right={"1.5"}
         w={8} h={8}
       />
-       <Flex gap={4} justify='center' pos='absolute' transform="translate(60%)"  bottom='-40px' >{images.map((image,slideIndex) =>{
+       <Flex gap={8}  pos='absolute' transform="translate(10%)"  bottom='-30px' >{images.map((image,slideIndex) =>{
             const currentSlide = currentIndex === slideIndex
         return(
-            <Icon as={BsDot} key={slideIndex} onClick={()=>selectSlide(slideIndex)} w='8' h='8' color={currentSlide ? 'red.300':'gray.300'}  />
+            // <Icon as={BsDot} key={slideIndex} onClick={()=>selectSlide(slideIndex)} w='8' h='8' color={currentSlide ? 'red.300':'gray.300'}  />
+            <Box  key={slideIndex} onClick={()=>selectSlide(slideIndex)} w={[5,8,10]} h={[1]} rounded={10} bgColor={currentSlide ? 'red.300':'gray.300'}  />
         )
     })}
     </Flex>

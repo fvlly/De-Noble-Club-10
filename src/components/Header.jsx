@@ -8,7 +8,7 @@ import Links from "./Links";
 const Header = () => {
 
   return (
-    <nav>
+    
       <Flex
         position="fixed"
         zIndex={2}
@@ -32,10 +32,10 @@ const Header = () => {
         <Link as={RouterLink} to="/">
           De Noble Club10
         </Link>
-        <Box><Links direction={'row'} /></Box>
-        <Box display={['block','none']}><Hamburger direction='column' spacing='20' /></Box> 
+        <Box display={['none','none','block']}><Links direction={'row'} /></Box>
+        <Box display={['block','base','none']}><Hamburger direction='column' spacing='20' /></Box> 
       </Flex>
-    </nav>
+    
   );
 }
 

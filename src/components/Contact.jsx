@@ -7,7 +7,7 @@ import ContactCard from './ContactCard'
 const Contact = () => {
   return (
     <Box as="section" minH={"95vh"} pt="110px" bgColor={"gray.900"}>
-    <Container maxW={["90vw"]} lineHeight={[1.2, 1.5]} color="white">
+    <Container maxW={["90vw","75vw"]} lineHeight={[1.2, 1.5]} color="white">
     <Heading py={[4, 6]} color='red.300'>Contact Us</Heading>
     <Box display='flex' flexDirection={['column','column','row']} gap={[4,10]} >
         <Box  width={['full','full','50%']} >
