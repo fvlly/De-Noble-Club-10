@@ -2,6 +2,7 @@ import { useRef } from "react";
 import {Drawer,DrawerBody,DrawerOverlay,DrawerContent,DrawerCloseButton,Box,Icon,useDisclosure,Button} from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
+import Links from "./Links";
 
 
 const Hamburger = () => {
@@ -10,7 +11,7 @@ const Hamburger = () => {
 
   return (
     <Box display={{ base: "flex", md: "none" }}>
-      <Button ref={btnRef} onClick={onOpen}>
+      <Button bgColor={'gray.700'} ref={btnRef} onClick={onOpen} >
         <Icon as={GiHamburgerMenu}  w={6} h={6}  />
       </Button>
       <Drawer
@@ -25,8 +26,8 @@ const Hamburger = () => {
           <DrawerCloseButton color={'gray.300'}>
             <Icon as={AiOutlineClose} w={6} h={6} />
           </DrawerCloseButton>
-          <DrawerBody >
-
+          <DrawerBody display={'flex'} flexDirection='column' justifyContent='center' fontSize={'24px'}  >
+            <Links direction='column' handleClick={onClose} />
           </DrawerBody>
         </DrawerContent>
       </Drawer>

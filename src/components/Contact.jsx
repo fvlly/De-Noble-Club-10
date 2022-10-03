@@ -7,10 +7,10 @@ import ContactCard from './ContactCard'
 const Contact = () => {
   return (
     <Box as="section" minH={"95vh"} pt="110px" bgColor={"gray.900"}>
-    <Container maxW={["90vw","75vw"]} lineHeight={[1.2, 1.5]} color="white">
+    <Container maxW={["90vw","75vw","90vw",'75vw']} lineHeight={[1.2, 1.5]} color="white">
     <Heading py={[4, 6]} color='red.300'>Contact Us</Heading>
     <Box display='flex' flexDirection={['column','column','row']} gap={[4,10]} >
-        <Box  width={['full','full','50%']} >
+        <Box  width={['full','full','70%','50%']} >
             <Heading as={'h3'} py='6'>Leave  a message</Heading>
             <form>
                <FormControl>
@@ -32,7 +32,7 @@ const Contact = () => {
                <Button my={6} type='submit' colorScheme={'red'}>Send Message</Button>
             </form>
         </Box>
-        <Box>
+        <Box pb={4}>
             <Heading as='h3' py={6}>Contact Details</Heading>
             <ContactCard heading='Our Location' content="Kogi Central Senatorial District,<br /> Okene,Kogi,Nigeria" icon={GoLocation } />
             <ContactCard heading='Call Us' content="+234 335 456 12" icon={AiFillPhone } />

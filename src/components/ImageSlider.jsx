@@ -1,7 +1,6 @@
 import { Box, Icon,Flex } from "@chakra-ui/react";
 import { useState } from "react";
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
-import {BsDot} from 'react-icons/bs'
 import { communityImages } from "../images";
 
 const ImageSlider = ({ images }) => {
@@ -12,7 +11,7 @@ const ImageSlider = ({ images }) => {
     <Box>
     <Box
       cursor={'pointer'}
-      pos="relative" w={['300px',"450px",]} h="400px"
+      pos="relative" w={['300px',"350px","450px",]} h="400px"
       border={"1px solid"} rounded={10}
       bgImg={images[currentIndex].src} bgPos="center" bgSize={"cover"}
     >
@@ -30,13 +29,16 @@ const ImageSlider = ({ images }) => {
         pos="absolute" top={"50%"} transform="translate(0, -50%)" right={"1.5"}
         w={8} h={8}
       />
-       <Flex gap={8}  pos='absolute' transform="translate(10%)"  bottom='-30px' >{images.map((image,slideIndex) =>{
+       <Flex  justify='space-between' w={'100%'}
+              pos='absolute' transform="translate(0)"  bottom='-20px' >
+          {images.map((image,slideIndex) => {
             const currentSlide = currentIndex === slideIndex
-        return(
-            // <Icon as={BsDot} key={slideIndex} onClick={()=>selectSlide(slideIndex)} w='8' h='8' color={currentSlide ? 'red.300':'gray.300'}  />
-            <Box  key={slideIndex} onClick={()=>selectSlide(slideIndex)} w={[5,8,10]} h={[1]} rounded={10} bgColor={currentSlide ? 'red.300':'gray.300'}  />
-        )
-    })}
+            return(
+              <Box  key={slideIndex} onClick={()=>selectSlide(slideIndex)}
+                   w={[10]} h={[1]}  rounded={10} 
+                   bgColor={currentSlide ? 'red.300':'gray.300'}  />
+            )
+          })}
     </Flex>
     </Box>
    

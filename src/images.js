@@ -1,4 +1,9 @@
 
+export const bgImages = [
+    {src:'./bgImages/club10-homebg.jpg'},
+    {src:'./bgImages/bg-3-large.webp'},
+    {src:'./bgImages/bg-3.webp'}
+]
 export const communityImages = [
     {src:'./community/community-1.jpg',title: 'community-1'},
     {src:'./community/community-2.jpg',title: 'community-2'},

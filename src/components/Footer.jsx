@@ -5,7 +5,7 @@ import { AiOutlineCopyrightCircle } from "react-icons/ai";
 const Footer = () => {
   return (
     <footer>
-            <Flex direction={['column','column','row']} justify='center' px={[12,8]} py={[4,6]} gap={2} bgColor='gray.800' color={'white'}  >
+            <Flex direction={['column','column','row']} justify='center' px={[8,20,12,15]} py={[4,6]} gap={2} bgColor='gray.800' color={'white'}  >
             <Box w='400px' >
             <Text pb={4} fontWeight='extrabold' fontSize={'20px'}>De Noble Club 10</Text>
             <Text>Partner with us</Text>
