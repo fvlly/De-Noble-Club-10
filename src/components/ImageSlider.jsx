@@ -21,6 +21,7 @@ const ImageSlider = ({ images }) => {
         as={AiFillCaretLeft}
         pos="absolute" top={"50%"} transform="translate(0, -50%)"
         w={8} h={8}
+        color='red.300'
       />
       {/* Next Button */}
       <Icon
@@ -28,6 +29,8 @@ const ImageSlider = ({ images }) => {
         as={AiFillCaretRight}
         pos="absolute" top={"50%"} transform="translate(0, -50%)" right={"1.5"}
         w={8} h={8}
+        color='red.300'
+
       />
        <Flex  justify='space-between' w={'100%'}
               pos='absolute' transform="translate(0)"  bottom='-20px' >

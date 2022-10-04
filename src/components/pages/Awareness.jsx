@@ -15,12 +15,12 @@ const Awareness = () => {
           Awareness
         </Heading>
         <Text lineHeight={[2]} fontSize={["18px", "20px", "22px"]}>
-          Unfortunately we can't take online payments at the moment,However, if
+          Unfortunately we can't take online payments at the moment. However, if
           you still wish to support our work , direct transfer to our bank is
           possible please refer to the bank details below to make your
           donations. We appreciate your support and efforts towards the cause.
         </Text>
-        <Box py={[2,4,6]}>
+        <Box py={[2,4,6]} lineHeight={[2]} fontSize={["18px", "20px", "22px"]}>
           <VStack spacing={4} align="flex-start">
             <Text>Bank Name : Zenith Bank</Text>
             <Text>Account Name : De Noble Club 10, KOGI CENTRAL</Text>
@@ -39,7 +39,9 @@ const Awareness = () => {
                 07030922792 or 0902914020{" "}
               </Text>
             </Text>
-            <Text>Email: denobleclub10@gmail.com</Text>
+            <Text>Email: denobleclub10@gmail.com
+              
+            </Text>
             <Text>Phone: +234 70 4453 12</Text>
           </VStack>
         </Box>

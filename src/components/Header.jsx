@@ -20,10 +20,10 @@ const Header = () => {
               },
             }}
           >
-            <Link as={RouterLink} to="/">
+            <Link as={RouterLink} to="/" fontSize='20px'>
               De Noble Club10
             </Link>
-            <Box  display={{ base: "none", md: "block" }}><Links direction={'row'} /></Box>
+            <Box  display={{ base: "none", md: "block" }} fontSize='20px'><Links direction={'row'} /></Box>
             <Box display={{ base: "block", md: "none" }}><Hamburger direction='column' spacing='20' /></Box> 
           </Flex>
     

@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Route} from 'react-router-dom'
 
 import Header from './components/Header'
-import Home from './components/Home'
-import About from './components/About'
-import Projects from './components/Projects'
-import Awareness from './components/Awareness'
-import Contact from './components/Contact'
+import Home from './components/pages/Home'
+import About from './components/pages/About'
+import Projects from './components/pages/Projects'
+import Awareness from './components/pages/Awareness'
+import Contact from './components/pages/Contact'
 import Footer from './components/Footer'
 
 const App = () => {

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { Box, Button, Container, Heading, Text } from "@chakra-ui/react";
+import { Box, Container, Heading, Text } from "@chakra-ui/react";
 
-import { bgImages } from "../images";
-import VisionCard from "./VisionCard";
-import ProjectCard from "./ProjectCard";
-import LinkButton from "./LinkButton";
+import { bgImages } from "../../images";
+import VisionCard from "../VisionCard";
+import ProjectCard from "../ProjectCard";
+import LinkButton from "../LinkButton";
+
 
 const Home = () => {
   const [imageIndex,setImageIndex] = useState(0)
@@ -25,24 +26,30 @@ const Home = () => {
   },[imageIndex])
 
   return (
-    <Box as="section" bgColor="gray.900">
+    <Box as="section" bgColor="gray.900" color="red.300" >
       <Box
+        pos='relative' isolation='isolate'
         display={'flex'}
         justifyContent='center' alignItems={'center'}
         minH={"100vh"}
-        color="white"
-        bgColor="gray.900"
         bgBlendMode={"luminosity"}
         transition="ease-in-out .7"
         backgroundImage={bgImages[imageIndex].src}
         backgroundPosition={'right'}
         bgSize="cover"
-        opacity=".7"
+
+        _after={{
+          position: 'absolute',
+          zIndex: '-1',
+          content:'""',
+          inset: 0,
+          backgroundColor: 'gray.900',
+          opacity: '.85'
+        }}
        >
         <Box px={2}>
-          <Heading as="h1" lineHeight={2}>
-            Creating Awareness within the Ebira Community, since 1976.
-          </Heading>
+          <Heading as="h1"  fontSize={['22px','32px','48px']} lineHeight={[2,2.5]}>Promoting peace and prosperity,</Heading>
+          <Heading fontSize={['18px','28px','40px']} lineHeight={[2,2.5]} >within the Ebira community, since 1976</Heading>
           <Text>The responsibilty of one is the responsibilty of all</Text>
         </Box>
       </Box>
@@ -103,12 +110,12 @@ const Home = () => {
 
         {/* Our projects */}
         <Box py={4}>
-          <Heading textAlign={['left','center']}> Recent projects</Heading>
+          <Heading> Recent projects</Heading>
           <Box
             py={"4"}
-            display={"flex"}  gap={2}
+            display={"flex"}  justifyContent={["center", "space-between"]}
             flexDirection={["column", "column", "row"]}
-            alignItems={['flex-start',"center"]} justifyContent={["center", "space-evenly"]}
+            alignItems={['flex-start',"center"]} 
           >
             <ProjectCard
               description={"Summer School"}
@@ -120,23 +127,10 @@ const Home = () => {
               src="../community/community-1.jpg"
               intro="Community briefing on elections and safety"
             />
-            <ProjectCard
-              description={"Boreholes"}
-              intro="Borehole  in Obeira market area, to alleivate water scarcity"
-            />
+            
           </Box>
 
-          <Box textAlign={"center"} my={4}>
-            <LinkButton
-              text="View All"
-              to="/projects"
-              px={[8]}
-              py={[2.5]}
-              rounded={10}
-              bgColor="red.500"
-              color="white"
-            />
-          </Box>
+         
         </Box>
       </Container>
     </Box>

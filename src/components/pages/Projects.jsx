@@ -10,8 +10,8 @@ import {
   AccordionPanel,
   AccordionIcon,
 } from "@chakra-ui/react";
-import { communityImages, summerSchoolImages } from "../images";
-import ImageSlider from "./ImageSlider";
+import { communityImages, summerSchoolImages } from "../../images";
+import ImageSlider from "../ImageSlider";
 
 const Projects = () => {
   return (
@@ -33,7 +33,7 @@ const Projects = () => {
         >
           <ImageSlider images={communityImages} />
           <Box textAlign={"left"} pt="30px">
-            <Heading pb={4}>Summer School</Heading>
+            <Heading pb={4}>Santisaion</Heading>
             <Text lineHeight={[2]} fontSize={["18px", "20px", "22px"]}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim
@@ -51,7 +51,7 @@ const Projects = () => {
         >
           <ImageSlider images={summerSchoolImages} />
           <Box pt="30px">
-            <Heading pb={4}>Sanitisation</Heading>
+            <Heading pb={4}>Summer School</Heading>
             <Text lineHeight={[2]} fontSize={["18px", "20px", "22px"]}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim
@@ -86,6 +86,22 @@ const Projects = () => {
               <AccordionButton>
                 <Box flex="1" textAlign="left">
                   Radio Programme
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </AccordionPanel>
+          </AccordionItem>
+          <AccordionItem>
+            <h2>
+              <AccordionButton>
+                <Box flex="1" textAlign="left">
+                  Borehole
                 </Box>
                 <AccordionIcon />
               </AccordionButton>

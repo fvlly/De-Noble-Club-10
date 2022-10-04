@@ -2,7 +2,7 @@ import {Box,Container,Heading,Text,Textarea,Input,FormLabel,FormControl, Button}
 import {GoLocation} from 'react-icons/go'
 import {AiFillPhone,AiOutlineMail} from 'react-icons/ai'
 
-import ContactCard from './ContactCard'
+import ContactCard from '../ContactCard'
 
 const Contact = () => {
   return (
