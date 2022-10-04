@@ -15,19 +15,19 @@ const Contact = () => {
             <form>
                <FormControl>
                <FormLabel>Name</FormLabel>
-                <Input />
+                <Input required />
                </FormControl>
                <FormControl>
                <FormLabel>Email</FormLabel>
-                <Input />
+                <Input  required />
                </FormControl>
                <FormControl>
                <FormLabel>Subject</FormLabel>
-                <Input />
+                <Input required />
                </FormControl>
                <FormControl>
                <FormLabel>Message</FormLabel>
-                <Textarea />
+                <Textarea required />
                </FormControl>
                <Button my={6} type='submit' colorScheme={'red'}>Send Message</Button>
             </form>
