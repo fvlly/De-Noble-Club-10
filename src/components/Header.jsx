@@ -7,7 +7,7 @@ import Links from "./Links";
 const Header = () => {
     return (
           <Flex
-            align="center" justify={['space-around','space-between']}
+            align="center" justify={['space-between']}
             position="fixed"  top={0}   zIndex={2}
             minH="10vh" w={"full"}  px={['40px']}
             bgColor={"gray.900"} color="red.300"

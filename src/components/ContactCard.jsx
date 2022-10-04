@@ -4,7 +4,7 @@ import { Box, Center, Flex,Icon,Text } from "@chakra-ui/react"
 const ContactCard = ({icon,heading,content}) => {
   return (
     <Flex gap={[2,4]} align='center'>
-        <Center w={'50px'} h='50px' rounded={'full'} bgColor={'gray.600'}>
+        <Center minW={'50px'} h='50px' rounded={'full'} bgColor={'gray.600'}>
         <Icon w={6} h={6} as={icon} color='red.300' />
         </Center>
         <Box alignSelf={'flex-start'}>
