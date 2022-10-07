@@ -1,16 +1,33 @@
-import {Link as RouterLink} from 'react-router-dom'
-import { Link } from '@chakra-ui/react'
+import { Link as RouterLink } from "react-router-dom";
+import { Link } from "@chakra-ui/react";
 
-const LinkButton = ({text,to,bgColor,color,px,py,rounded}) => {
+const LinkButton = ({ text, to, bgColor, color, w, h, px, py, rounded }) => {
   return (
-        <Link as={RouterLink} to={to}
-         px={px} py={py} rounded={rounded}
-        bgColor={bgColor} color={color}
-        _hover={{textDecoration:'none',transform:'scale(1.1)'}}
-        >
-            {text}
-        </Link>
-    )
-}
+    <Link
+      display="flex"
+      justifyContent={'center'}
+      alignItems='center'
+      as={RouterLink}
+      to={to}
+      px={px}
+      py={py}
+      rounded={rounded}
+      w={w}
+      h={h}
+      border="3px solid"
+      borderColor={bgColor}
+      outline="3px solid white"
+      bgColor={bgColor}
+      color={color}
+      transition="outlineOffset 250 ease"
+      _hover={{
+        textDecoration: "none",
+        outlineOffset: "-5px",
+      }}
+    >
+      {text}
+    </Link>
+  );
+};
 
-export default LinkButton
+export default LinkButton;

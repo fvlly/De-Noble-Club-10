@@ -47,7 +47,11 @@ const Home = () => {
         }}
       >
         <Box px={[4, 8]}>
-          <Heading as="h1" fontSize={["20px",'24px', "35px", "60px"]} lineHeight={[2]}>
+          <Heading
+            as="h1"
+            fontSize={["20px", "24px", "35px", "60px"]}
+            lineHeight={[2]}
+          >
             Promoting peace and prosperity,
           </Heading>
           <Heading fontSize={["18px", "28px", "40px"]}>
@@ -56,11 +60,11 @@ const Home = () => {
               as="span"
               color="red.300"
               fontWeight="extrabold"
-              fontSize={["22px",'32px', "40px", "65px"]}
+              fontSize={["22px", "32px", "40px", "65px"]}
             >
               Ebira community,
-            </Text>{" "}
-          
+            </Text>
+            {/* {" Philantrophy,Educating and Sensitizing"} */}
           </Heading>
           <Text py={4} fontSize={["16px", "20px", "24px"]}>
             The responsibilty of one is the responsibilty of all
@@ -98,16 +102,17 @@ const Home = () => {
           bgColor="gray.800"
           color={"gray.200"}
         >
-          <Box width={["100%", "60%", "50%"]} py={[4]}>
+          <Box width={["100%", "60%", "50%"]} py={[4, 6]}>
             <Heading fontSize={["18px", "24px"]}>
               You can make a difference
             </Heading>
-            <Text py={[4]}>Your support helps more than you know</Text>
+            <Text py={[4, 6]}>Your support helps more than you know</Text>
             <LinkButton
               text="Donate Now"
               to="/awareness"
               px={[2, 4]}
               py={[2.5]}
+              w="140px"
               rounded={10}
               bgColor="red.500"
               color="white"
@@ -127,19 +132,20 @@ const Home = () => {
           <Box
             py={"4"}
             display={"flex"}
+            gap="6"
             justifyContent={["space-between"]}
             flexDirection={["column", "column", "row"]}
             alignItems={["flex-start"]}
           >
             <ProjectCard
               description={"Summer School"}
-              src="../summerschool/summerschool-1.jpg"
+              src="../summerschool/summerschool-1.webp"
               intro="Yearly programme to improve education"
             />
             <ProjectCard
               description={"Sensitization"}
-              src="../community/community-1.jpg"
-              intro="Community briefing on elections and safety"
+              src="../community/community-3.webp"
+              intro="Community enlightenment on relevant issues"
             />
           </Box>
         </Box>
@@ -149,24 +155,3 @@ const Home = () => {
 };
 
 export default Home;
-
-// const [windowWidth,setWindowWidth] = useState(window.innerWidth)
-
-// const imageSrcIndex = () =>{
-//   if(windowWidth <= 640) {
-//     return 0
-//   }else if (windowWidth >640 && windowWidth <=1190) {
-//     return 1
-//   }else{
-//     return 2
-//   }
-// }
-
-//change imagesize based on viewport
-// console.log(windowWidth);
-// const resizeWindowWidth = () => {
-//   setWindowWidth(window.innerWidth)
-// }
-
-// window.addEventListener('resize',resizeWindowWidth)
-// window.removeEventListener('resize',resizeWindowWidth)

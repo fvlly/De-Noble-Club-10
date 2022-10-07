@@ -33,12 +33,12 @@ const Projects = () => {
         >
           <ImageSlider images={communityImages} />
           <Box textAlign={"left"} pt="30px">
-            <Heading pb={4}>Santisaion</Heading>
+            <Heading pb={4}>Sensitization</Heading>
             <Text lineHeight={[2]} fontSize={["18px", "20px", "22px"]}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco nisi ut aliquip ex ea
-              commodo consequat.
+              Help sensitize the community on political issues, employment opportunities and career development,
+              social and security challanges, and the importance of population census. In addition, youth programmes 
+              are designed to address social and moral issues within the community as well as mentoring them on 
+              education and careers
             </Text>
           </Box>
         </Flex>
@@ -53,10 +53,10 @@ const Projects = () => {
           <Box pt="30px">
             <Heading pb={4}>Summer School</Heading>
             <Text lineHeight={[2]} fontSize={["18px", "20px", "22px"]}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco nisi ut aliquip ex ea
-              commodo consequat.
+            Summer school is an annual preparatory class held during the long vacation for science students in
+             their penuultimate year. Students are
+            tutored on the essential subjects, Maths, English, Physics, Chemistry and Biology. In preparaion for 
+            their upcoming WEACAccordion,NECO and JAMB exams
             </Text>
           </Box>
         </Flex>

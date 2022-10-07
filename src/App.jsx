@@ -1,22 +1,28 @@
+import { lazy, Suspense } from 'react'
 import { BrowserRouter as Router, Route} from 'react-router-dom'
 
 import Header from './components/Header'
 import Home from './components/pages/Home'
-import About from './components/pages/About'
-import Projects from './components/pages/Projects'
-import Awareness from './components/pages/Awareness'
-import Contact from './components/pages/Contact'
 import Footer from './components/Footer'
+
+const lazyAbout = lazy(()=> import('./components/pages/About'))
+const lazyProjects = lazy(()=> import('./components/pages/Projects'))
+const lazyAwareness = lazy(()=> import('./components/pages/Awareness'))
+const lazyContact = lazy(()=> import('./components/pages/Contact'))
+
 
 const App = () => {
   return (
         <Router>
           <Header />
+          <Suspense fallback='Loading...'>
           <Route exact path='/' component={Home} />
-          <Route path='/about' component={About} />
-          <Route path='/projects' component={Projects} />
-          <Route path='/awareness' component={Awareness} />
-          <Route path='/contact' component={Contact} />
+          <Route path='/about' component={lazyAbout} />
+          <Route path='/projects' component={lazyProjects} />
+          <Route path='/awareness' component={lazyAwareness} />
+          <Route path='/contact' component={lazyContact} />
+
+          </Suspense>
           <Footer />
         </Router>
     )
