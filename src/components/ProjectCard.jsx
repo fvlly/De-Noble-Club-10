@@ -10,38 +10,32 @@ const ProjectCard = ({ description, src, intro }) => {
       rounded={10}
       outline="2px solid gray"
       mb={4}
-
       _before={{
-        position:'absolute',
+        position: "absolute",
         content: "''",
-        inset:0,
-        borderTop: '2px solid red',
-        borderBottom: '2px solid red',
-        rounded: '8',
-        transform:'scale(0,1)',
-        transition:'transform 250 ease-out'
-
+        inset: 0,
+        borderTop: "2px solid red",
+        borderBottom: "2px solid red",
+        rounded: "8",
+        transform: "scale(0,1)",
+        transition: "transform 250ms ease-out",
       }}
       _after={{
-        position:'absolute',
+        position: "absolute",
         content: "''",
-        inset:0,
-        borderLeft: '2px solid red',
-        borderRight: '2px solid red',
-        rounded:'8',
-        transform:'scale(1,0)',
-        transition:'transform 250 ease-out'
-
+        inset: 0,
+        borderLeft: "2px solid red",
+        borderRight: "2px solid red",
+        rounded: "8",
+        transform: "scale(1,0)",
+        transition: "transform 250ms ease-out",
       }}
-
       // _hover={
       //   _before={
       //     transform:'scale(1,1)'
       //   }
-      
+        
       // }
-
-  
     >
       <Box
         display="flex"
@@ -51,24 +45,24 @@ const ProjectCard = ({ description, src, intro }) => {
         h="350px"
         bgColor="gray.900"
       >
-        <Image rounded={8} h="300px"  src={src} loading="lazy" />
+        <Image rounded={8} h="300px" src={src} loading="lazy" />
       </Box>
       <Box
         display={"flex"}
         flexDirection="column"
         alignItems={["flex-start", "center"]}
-        maxW='355px'
-        margin={'auto'}
+        maxW="355px"
+        margin={"auto"}
         py={1}
         px={[4, 6]}
       >
-        <Text fontWeight={"bold"} fontSize="20px" alignSelf={['baseline']}>
+        <Text fontWeight={"bold"} fontSize="20px" alignSelf={["baseline"]}>
           {description}
         </Text>
         <Text py={2} fontSize="18px">
           {intro}
         </Text>
-        <Box my={4} w='full'>
+        <Box my={4} w="full">
           <LinkButton
             text="View More"
             to="/projects"

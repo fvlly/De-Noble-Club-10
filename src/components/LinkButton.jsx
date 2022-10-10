@@ -19,7 +19,7 @@ const LinkButton = ({ text, to, bgColor, color, w, h, px, py, rounded }) => {
       outline="3px solid white"
       bgColor={bgColor}
       color={color}
-      transition="outlineOffset 250 ease"
+      transition="outlineOffset 250ms ease"
       _hover={{
         textDecoration: "none",
         outlineOffset: "-5px",
