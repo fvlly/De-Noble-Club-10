@@ -1,14 +1,14 @@
 
 export const bgImages = [
-    {src:'./bgImages/club10-homebg.jpg'},
+    {src:'./bgImages/club10-homebg.webp'},
     {src:'./bgImages/bg-3-large.webp'},
     {src:'./bgImages/bg-3.webp'}
 ]
 export const communityImages = [
     {src:'./community/community-1.webp',title: 'community-1'},
-    {src:'./community/community-2.jpg',title: 'community-2'},
+    {src:'./community/community-2.webp',title: 'community-2'},
     {src:'./community/community-3.webp',title: 'community-3'},
-    {src:'./community/community-4.jpg',title: 'community-4'},
+    {src:'./community/community-4.webp',title: 'community-4'},
     {src:'./community/community-5.webp',title: 'community-4'},
 ]
 export const summerSchoolImages = [

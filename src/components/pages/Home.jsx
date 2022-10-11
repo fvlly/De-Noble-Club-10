@@ -119,7 +119,7 @@ const Home = () => {
             />
           </Box>
           <Box
-            bgImage={"../closeup-eye.jpg"}
+            bgImage={"../closeup-eye.webp"}
             bgPosition="center"
             bgSize={"cover"}
             w={["0px", "40%", "50%"]}
