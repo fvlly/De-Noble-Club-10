@@ -14,8 +14,8 @@ const ProjectCard = ({ description, src, intro }) => {
         position: "absolute",
         content: "''",
         inset: 0,
-        borderTop: "2px solid red",
-        borderBottom: "2px solid red",
+        borderTop: "3px solid #FC8181",
+        borderBottom: "3px solid #FC8181",
         rounded: "8",
         transform: "scale(0,1)",
         transition: "transform 250ms ease-out",
@@ -24,18 +24,21 @@ const ProjectCard = ({ description, src, intro }) => {
         position: "absolute",
         content: "''",
         inset: 0,
-        borderLeft: "2px solid red",
-        borderRight: "2px solid red",
+        borderLeft: "3px solid #FC8181",
+        borderRight: "3px solid #FC8181",
         rounded: "8",
         transform: "scale(1,0)",
         transition: "transform 250ms ease-out",
       }}
-      // _hover={
-      //   _before={
-      //     transform:'scale(1,1)'
-      //   }
+      _hover={{
+        _before:{
+          transform:'scale(1,1)'
+        },
+        _after:{
+          transform:'scale(1,1)'
+        }
         
-      // }
+      }}
     >
       <Box
         display="flex"

@@ -36,7 +36,7 @@ const Contact = () => {
             <Heading as='h3' py={4}>Contact Details</Heading>
             <ContactCard heading='Our Location' content="Kogi Central Senatorial District, Okene, Kogi, Nigeria" icon={GoLocation } />
             <ContactCard heading='Call Us' content="+234 335 456 12" icon={AiFillPhone } />
-            <ContactCard heading='Our Email' content="nobleclub10@xyz.com" icon={AiOutlineMail } />
+            <ContactCard heading='Our Email' content="denobleclub10@gmail.com" icon={AiOutlineMail } />
         </Box>
     </Box>
         </Container>
