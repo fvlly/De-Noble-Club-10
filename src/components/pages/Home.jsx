@@ -1,76 +1,15 @@
 import { useEffect, useState } from "react";
 import { Box, Container, Heading, Text } from "@chakra-ui/react";
 
-import { bgImages } from "../../images";
 import VisionCard from "../VisionCard";
 import ProjectCard from "../ProjectCard";
 import LinkButton from "../LinkButton";
+import Hero from "../Hero";
 
 const Home = () => {
-  const [imageIndex, setImageIndex] = useState(0);
-
-  useEffect(() => {
-    // change image after 5sec
-    const interval = setInterval(() => {
-      const currentImageIndex =
-        imageIndex === bgImages.length - 1 ? 0 : imageIndex + 1;
-      setImageIndex(currentImageIndex);
-    }, 5000);
-
-    // clear interval
-    return () => {
-      clearInterval(interval);
-    };
-  }, [imageIndex]);
-
   return (
     <Box as="section" bgColor="gray.900" color="white">
-      <Box
-        pos="relative"
-        isolation="isolate"
-        display={"flex"}
-        justifyContent={["center", "center", "flex-start"]}
-        alignItems={"center"}
-        minH={"100vh"}
-        bgBlendMode={"luminosity"}
-        transition="ease-in-out .7"
-        backgroundImage={bgImages[imageIndex].src}
-        backgroundPosition={"right"}
-        bgSize="cover"
-        _after={{
-          position: "absolute",
-          zIndex: "-1",
-          content: '""',
-          inset: 0,
-          backgroundColor: "gray.900",
-          opacity: ".85",
-        }}
-      >
-        <Box px={[4, 8]}>
-          <Heading
-            as="h1"
-            fontSize={["20px", "24px", "35px", "60px"]}
-            lineHeight={[2]}
-          >
-            Promoting peace and prosperity,
-          </Heading>
-          <Heading fontSize={["18px", "28px", "40px"]}>
-            within the{" "}
-            <Text
-              as="span"
-              color="red.300"
-              fontWeight="extrabold"
-              fontSize={["22px", "32px", "40px", "65px"]}
-            >
-              Ebira community,
-            </Text>
-            {/* {" Philantrophy,Educating and Sensitizing"} */}
-          </Heading>
-          <Text py={4} fontSize={["16px", "20px", "24px"]}>
-            The responsibilty of one is the responsibilty of all
-          </Text>
-        </Box>
-      </Box>
+      <Hero />
       <Container maxW={["90vw", "90vw", "90vw", "75vw"]} color="white">
         <Box
           py={"4"}

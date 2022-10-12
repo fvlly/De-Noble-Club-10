@@ -22,6 +22,8 @@ const ImageSlider = ({ images }) => {
         pos="absolute" top={"50%"} transform="translate(0, -50%)"
         w={8} h={8}
         color='red.300'
+        role={'button'}
+        aria-label='previous button'
       />
       {/* Next Button */}
       <Icon
@@ -30,7 +32,10 @@ const ImageSlider = ({ images }) => {
         pos="absolute" top={"50%"} transform="translate(0, -50%)" right={"1.5"}
         w={8} h={8}
         color='red.300'
+        role={'button'}
+        aria-label='next button'
 
+        
       />
        <Flex  justify='space-between' w={'100%'}
               pos='absolute' transform="translate(0)"  bottom='-20px' >
@@ -39,7 +44,7 @@ const ImageSlider = ({ images }) => {
             return(
               <Box  key={slideIndex} onClick={()=>selectSlide(slideIndex)}
                    w={[10]} h={[1]}  rounded={10} 
-                   bgColor={currentSlide ? 'red.300':'gray.300'}  />
+                   bgColor={currentSlide ? 'red.300':'gray.300'} role='button'  />
             )
           })}
     </Flex>
@@ -53,6 +58,7 @@ const ImageSlider = ({ images }) => {
     const newIndex = isFirstSlide ? communityImages.length-1 : currentIndex -1
     setCurrentIndex(newIndex)
   }
+ 
   function nextSlide() {
     const isLastSlide = currentIndex=== communityImages.length-1
     const newIndex = isLastSlide ? 0 : currentIndex +1

@@ -8,9 +8,6 @@ describe("Home page", () => {
   it("Should display VisionCrad", () => {
     render(<VisionCard title="vision" message="Hello testing" />);
 
-    screen.debug();
-
-
-    expect(screen.getByText(/Hello testing/i)).toBeInTheDocument()
+    expect(screen.getByText(/Hello testing/i)).toBeInTheDocument();
   });
 });
