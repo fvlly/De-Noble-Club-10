@@ -47,22 +47,22 @@ const Hero = () => {
           fontSize={["20px", "24px", "35px", "60px"]}
           lineHeight={[2]}
         >
-          Promoting peace and prosperity,
+          Promoting peace and ,
         </Heading>
-        <Heading fontSize={["18px", "28px", "40px"]}>
-          within the{" "}
-          <Text
-            as="span"
-            color="red.300"
-            fontWeight="extrabold"
-            fontSize={["22px", "32px", "40px", "65px"]}
-          >
-            Ebira community,
-          </Text>
+        <Text fontSize={["18px", "28px", "40px"]}>
+          prosperity within the{" "}
           {/* {" Philantrophy,Educating and Sensitizing"} */}
-        </Heading>
+        </Text>
+        <Text
+          as="span"
+          color="red.300"
+          fontWeight="extrabold"
+          fontSize={["22px", "32px", "40px", "65px"]}
+        >
+          Ebira community.
+        </Text>
         <Text py={4} fontSize={["16px", "20px", "24px"]}>
-          The responsibilty of one is the responsibilty of all
+            Fostering growth and responsiblity
         </Text>
       </Box>
     </Box>
