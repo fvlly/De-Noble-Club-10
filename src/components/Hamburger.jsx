@@ -11,7 +11,7 @@ const Hamburger = () => {
 
   return (
     <Box display={{ base: "flex", md: "none" }}>
-      <Button bgColor={'gray.700'} ref={btnRef} onClick={onOpen} >
+      <Button bgColor={'gray.700'} ref={btnRef} onClick={onOpen} aria-label='open hamburger menu button' >
         <Icon as={GiHamburgerMenu}  w={6} h={6}  />
       </Button>
       <Drawer
@@ -23,7 +23,7 @@ const Hamburger = () => {
       >
         <DrawerOverlay />
         <DrawerContent bgColor="gray.800">
-          <DrawerCloseButton color={'gray.300'}>
+          <DrawerCloseButton color={'gray.300'} aria-label='close hamburger menu button'>
             <Icon as={AiOutlineClose} w={6} h={6} />
           </DrawerCloseButton>
           <DrawerBody display={'flex'} flexDirection='column' justifyContent='center' fontSize={'24px'}  >

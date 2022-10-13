@@ -1,29 +1,46 @@
 import { describe, it, expect } from "vitest";
 import { screen, render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import ChakraThemeWrapper from "./ChakraThemeWrapper";
 
 import ImageSlider from "./ImageSlider";
 import { communityImages } from "../images";
 
 describe("ImageSlider", () => {
-  it("should subtract one from curentSlideIndex", () => {
+  it("should have background Image", () => {
+    //first we should render the images slider
+    render(
+      <ChakraThemeWrapper>
+        <ImageSlider images={communityImages} wrap />
+      </ChakraThemeWrapper>
+    );
+
+    const bgImage = screen.getByTestId(/backgroundimage/i);
+    expect(bgImage).toHaveStyle(
+      `background-image: url(${communityImages[0].src})`
+    );
+  });
+
+  it("should change background image to next image", () => {
     const user = userEvent.setup();
 
-    //first we should render the images slider
-    render(<ImageSlider images={communityImages} />);
+    render(
+      <ChakraThemeWrapper>
+        <ImageSlider images={communityImages} />
+      </ChakraThemeWrapper>
+    );
 
-    // we check if background image changes by checking if there's a change in the index
-    const numberOfImages = communityImages.length;
-    const currentIndex = numberOfImages;
+    // background Image
+    const bgImage = screen.getByTestId(/backgroundimage/i);
 
-    //we click on the previous button(Icon)
-    const previousButton = screen.getByLabelText(/previous button/i);
-    screen.debug(previousButton)
-    user.click(previousButton)
+    const nextButton = screen.getByLabelText(/next button/i);
+    screen.debug(nextButton);
 
-    expect(currentIndex).not.toBe(0)
-    expect(currentIndex).not.toBe(numberOfImages )
+    //we change the background image to change on click on  nextButton
+    user.click(nextButton);
 
-
+    expect(bgImage.style.background).not.toBe(
+      `background-image: url(${communityImages[0].src})`
+    );
   });
 });

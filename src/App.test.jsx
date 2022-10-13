@@ -9,7 +9,7 @@ describe('app',()=>{
     it('should contain hero text',()=>{
         render(<App />)
 
-        expect(screen.getByRole('heading',{name: /promoting peace and prosperity/i})).toBeInTheDocument()
+        expect(screen.getByRole('heading',{name: /promoting peace and ,/i})).toBeInTheDocument()
         
     })
 
