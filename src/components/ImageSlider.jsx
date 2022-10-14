@@ -10,7 +10,7 @@ const ImageSlider = ({ images }) => {
       <Box
         cursor={"pointer"}
         pos="relative"
-        w={["300px", "350px", "450px"]}
+        w={["300px", "350px", "350px",'null',"450px"]}
         h="400px"
         border={"1px solid"}
         rounded={10}

@@ -10,34 +10,7 @@ const ProjectCard = ({ description, src, intro }) => {
       rounded={10}
       outline="2px solid gray"
       mb={4}
-      // _before={{
-      //   position: "absolute",
-      //   content: "''",
-      //   inset: 0,
-      //   borderTop: "3px solid #FC8181",
-      //   borderBottom: "3px solid #FC8181",
-      //   rounded: "8",
-      //   transform: "scale(0,1)",
-      //   transition: "transform 250ms ease-out",
-      // }}
-      // _after={{
-      //   position: "absolute",
-      //   content: "''",
-      //   inset: 0,
-      //   borderLeft: "3px solid #FC8181",
-      //   borderRight: "3px solid #FC8181",
-      //   rounded: "8",
-      //   transform: "scale(1,0)",
-      //   transition: "transform 250ms ease-out",
-      // }}
-      // _hover={{
-      //   _before: {
-      //     transform: "scale(1,1)",
-      //   },
-      //   _after: {
-      //     transform: "scale(1,1)",
-      //   },
-      // }}
+     
     >
       <Box
         display="flex"

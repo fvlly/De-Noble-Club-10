@@ -28,35 +28,42 @@ const Projects = () => {
         </Heading>
 
         {/* summer school */}
-        <Flex direction={['column','column','column','row']}
-          gap={10}
-        >
+        <Flex direction={["column", "column", "column", "row"]} gap={10}>
           <ImageSlider images={communityImages} />
-          <Box textAlign={"left"} pt="30px">
+          <Box textAlign={"left"} pt={["30px", "30px", "30px", "0px"]}>
             <Heading pb={4}>Sensitization</Heading>
-            <Text lineHeight={[2]} fontSize={["18px", "20px", "22px"]}>
-              Help sensitize the community on political issues, employment opportunities and career development,
-              social and security challanges, and the importance of population census. In addition, youth programmes 
-              are designed to address social and moral issues within the community as well as mentoring them on 
-              education and careers
+            <Text
+              lineHeight={[1.5, 1.5, 1.75, 2]}
+              fontSize={["18px", "20px", "20px", "20px", "22px"]}
+            >
+              Help sensitize the community on political issues, employment
+              opportunities and career development, social and security
+              challanges, and the importance of population census. In addition,
+              youth programmes are designed to address social and moral issues
+              within the community as well as mentoring them on education and
+              careers
             </Text>
           </Box>
         </Flex>
 
         {/* sanitization */}
-        <Flex direction={['column','column','column','row-reverse']}
-          
+        <Flex
+          direction={["column", "column", "column", "row-reverse"]}
           gap={10}
-          my={12}
+          my={16}
         >
           <ImageSlider images={summerSchoolImages} />
-          <Box pt="30px">
+          <Box pt={["30px", "30px", "30px", "0px"]}>
             <Heading pb={4}>Summer School</Heading>
-            <Text lineHeight={[2]} fontSize={["18px", "20px", "22px"]}>
-            Summer school is an annual preparatory class held during the long vacation for science students in
-             their penuultimate year. Students are
-            tutored on the essential subjects, Maths, English, Physics, Chemistry and Biology. In preparaion for 
-            their upcoming WEACAccordion,NECO and JAMB exams
+            <Text
+              lineHeight={[1.5, 1.5, 1.75, 2]}
+              fontSize={["18px", "20px", "20px", "20px", "22px"]}
+            >
+              Summer school is an annual preparatory class held during the long
+              vacation for science students in their penuultimate year. Students
+              are tutored on the essential subjects, Maths, English, Physics,
+              Chemistry and Biology. In preparaion for their upcoming
+              WEACAccordion,NECO and JAMB exams
             </Text>
           </Box>
         </Flex>
