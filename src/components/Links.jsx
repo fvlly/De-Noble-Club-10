@@ -17,6 +17,9 @@ const Links = ({direction,handleClick}) => {
                 <Link as={RouterLink} to='/awareness' onClick={handleClick} >Awareness</Link>
             </Center>
             <Center>
+                <Link as={RouterLink} to='/membership' onClick={handleClick} >Memebership</Link>
+            </Center>
+            <Center>
                 <Link as={RouterLink} to='/projects' onClick={handleClick} >Projects</Link>
             </Center>
             <Center>

@@ -28,17 +28,17 @@ const Footer = () => {
             <Text>Volunteer</Text>
           </Box>
           <Box lineHeight={[1.3]} fontSize={["16px", "18px", "18px", "22px"]}>
-            <Text>Kogi central Senatorial District </Text>
+            <Text> Afims Hotels Ltd Oro,Ovehira Lagos Highway </Text>
             <Text py={[2,3]}>Okene, Kogi, Nigeria</Text>
             <Text>
               <Text as={"span"} >
-                Phone: +234 803 456 756
+                Phone: +2348065472020
 
               </Text>{" "}
             </Text>
             <Text>
               <Text as={"span"} >
-                Email: denobleclub10@gmail.com
+                Email: denobleclub10kogi@gmail.com
 
               </Text>
             </Text>
