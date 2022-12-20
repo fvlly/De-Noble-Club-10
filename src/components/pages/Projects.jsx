@@ -81,10 +81,7 @@ const Projects = () => {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              During the formative years of the club, trafic stands where donated to the Nigerian police force
             </AccordionPanel>
           </AccordionItem>
 
@@ -98,10 +95,8 @@ const Projects = () => {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+             Radio progams are held bi-anually to enlighten the society at large on prevalanet issues within the society.
+             
             </AccordionPanel>
           </AccordionItem>
           <AccordionItem>
@@ -114,10 +109,8 @@ const Projects = () => {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+             In the recent past a borehole was drilled and donated  to Ovehira community market OHUMANKA, where 
+             siginifciant business trades are carried out.
             </AccordionPanel>
           </AccordionItem>
         </Accordion>
