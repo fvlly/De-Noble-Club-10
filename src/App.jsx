@@ -1,12 +1,12 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 
 import Header from "./components/Header";
 import Home from "./components/pages/Home";
 import Footer from "./components/Footer";
 import ErrorFallback from "./components/ErrorBoundary";
-import NotFound from "./components/pages/NotFound";
+import PageNotFound from "./components/pages/PageNotFound";
 import { Box } from "@chakra-ui/react";
 
 const lazyAbout = lazy(() => import("./components/pages/About"));
@@ -18,7 +18,8 @@ const lazyMembership = lazy(() => import("./components/pages/Membership"));
 const App = () => {
   return (
     <Router>
-      <ErrorBoundary
+     
+     <ErrorBoundary
         FallbackComponent={ErrorFallback}
         onReset={() => {
           window.location.reload();
@@ -33,16 +34,19 @@ const App = () => {
             </Box>
           }
         >
+          <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={lazyAbout} />
           <Route path="/projects" component={lazyProjects} />
           <Route path="/awareness" component={lazyAwareness} />
           <Route path="/membership" component={lazyMembership} />
           <Route path="/contact" component={lazyContact} />
-          <Route path="*" component={NotFound} />
+          <Route  component={PageNotFound} />
+          </Switch>
         </Suspense>
         <Footer />
       </ErrorBoundary>
+     
     </Router>
   );
 };
